@@ -1,0 +1,8 @@
+add_force {/KeyGeneratorUnit/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/KeyGeneratorUnit/enable} -radix hex {0 0ns}
+add_force {/KeyGeneratorUnit/reset} -radix hex {1 0ns}
+add_force {/KeyGeneratorUnit/keyIn} -radix hex { AABB09182736CCDD  0ns}
+run 100 ns
+add_force {/KeyGeneratorUnit/enable} -radix hex {1 0ns}
+add_force {/KeyGeneratorUnit/reset} -radix hex {0 0ns}
+run 100 ns

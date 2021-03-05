@@ -1,0 +1,8 @@
+add_force {/DataEncryptionUnit/dataIn} -radix hex {8000000000000000 0ns}
+add_force {/DataEncryptionUnit/currentKey} -radix hex {000000000000 0ns}
+add_force {/DataEncryptionUnit/rst} -radix hex {1 0ns}
+add_force {/DataEncryptionUnit/enable} -radix hex {1 0ns}
+add_force {/DataEncryptionUnit/clk} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 50 ns
+add_force {/DataEncryptionUnit/rst} -radix hex {0 0ns}
+run 1600 ns	

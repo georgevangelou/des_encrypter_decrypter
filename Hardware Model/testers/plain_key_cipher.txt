@@ -1,0 +1,19 @@
+Plain  text is: 123456ABCD132536
+Key         is: EE4312182736ACDE
+Cipher text is: DA322E5ADB306899
+
+Plain  text is: FF3216CE6CD325A0
+Key         is: AABB09182736CCDD
+Cipher text is: 4E4BC6B130CAA8B7
+
+Plain  text is: 123456ABCD132536
+Key         is: AABB09182736CCDD
+Cipher text is: C0B7A8D05F3A829C
+
+Plain  text is: 0000000000000000
+Key         is: 8000000000000000
+Cipher text is: 95A8D72813DAA94D
+
+Plain  text is: 0000000000000000
+Key         is: 0000000000000000
+Cipher text is: 8CA64DE9C1B123A7

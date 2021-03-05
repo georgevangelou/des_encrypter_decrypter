@@ -1,0 +1,58 @@
+add_force {/DesUnit/clk} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/DesUnit/rst} -radix hex {1 0ns}
+add_force {/DesUnit/enable} -radix hex {0 0ns}
+add_force {/DesUnit/encr_decr} -radix hex {0 0ns}
+add_force {/DesUnit/newData} -radix hex {0 0ns}
+add_force {/DesUnit/newKey} -radix hex {0 0ns}
+add_force {/DesUnit/dataIn} -radix hex {0000000000000000 0ns}
+add_force {/DesUnit/mainKey} -radix hex {000000000000 0ns}
+run 20 ns
+add_force {/DesUnit/rst} -radix hex {0 0ns}
+add_force {/DesUnit/enable} -radix hex {1 0ns}
+run 100 ns
+
+add_force {/DesUnit/mainKey} -radix hex {0000000000000000 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {0 0ns}
+run 1700 
+
+add_force {/DesUnit/dataIn} -radix hex {0000000000000000 0ns}
+add_force {/DesUnit/newData} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newData} -radix hex {0 0ns}
+run 1700 ns
+
+add_force {/DesUnit/mainKey} -radix hex {EE4312182736ACDE 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {0 0ns}
+run 1700 
+
+add_force {/DesUnit/mainKey} -radix hex {AABB09182736CCDD 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newKey} -radix hex {0 0ns}
+run 1700 
+
+add_force {/DesUnit/dataIn} -radix hex {FF3216CE6CD325A0 0ns}
+add_force {/DesUnit/newData} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newData} -radix hex {0 0ns}
+run 1700 ns
+
+add_force {/DesUnit/dataIn} -radix hex {123456ABCD132536 0ns}
+add_force {/DesUnit/newData} -radix hex {1 0ns}
+run 100 ns
+add_force {/DesUnit/newData} -radix hex {0 0ns}
+run 1700 ns
+
+add_force {/DesUnit/encr_decr} -radix hex {1 0ns}
+add_force {/DesUnit/newData} -radix hex {1 0ns}
+add_force {/DesUnit/dataIn} -radix hex {DA322E5ADB306899 0ns}
+run 100 ns
+add_force {/DesUnit/newData} -radix hex {0 0ns}
+run 1700 ns
